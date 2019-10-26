@@ -16,12 +16,12 @@ $jumbotron-bg: rgba(255,255,255,0.2);
   margin-right: auto;
 }
 
-.nav-item:link,
-.nav-item:visited{
-  color: rgb(108, 184, 236);
+.nav-link:link,
+.nav-link:visited{
+  color: rgba(255, 255, 255, 0.7);
 }
-.nav-item:link:hover,
-.nav-item:active{
-  color: rgb(120, 190, 260);
+.nav-link:link:hover,
+.nav-link:active{
+  color: rgba(255, 255, 255, 1);
   text-decoration: none;
 }
