@@ -12,19 +12,19 @@
   <body>
 
     <div class="container-fluid container-background">
-    <div class="container">
+      <div class="container">
 
-      <ul class="nav">
-  <li class="nav-item">
-    <%= link_to "Instaphoto", root_path, class:'nav-link active'%>
-  </li>
-  <li class="nav-item">
+    <ul class="nav">
+      <li class="nav-item">
+        <%= link_to "Instaphoto", root_path, class:'nav-link active'%>
+      </li>
+      <li class="nav-item">
     <%= link_to "О проекте", pages_about_path, class:'nav-link' %>
-  </li>
+    </li>
 
 </ul>
-
-
+ <p class="notice"><%= notice %></p>
+ <p class="alert"><%= alert %></p>
     <%= yield %>
     </div>
     </div>
