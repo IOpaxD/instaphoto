@@ -1,6 +1,7 @@
 class PhotosController < ApplicationController
   before_action :set_photo, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :owner, only: [:edit, :update, :destroy]
   def index
     @photos = Photo.all
   end
@@ -9,14 +10,14 @@ class PhotosController < ApplicationController
   end
 
   def new
-    @photo = Photo.new
+    @photo = current_user.photos.build
   end
 
   def edit
   end
 
   def create
-    @photo = Photo.new(photo_params)
+    @photo = current_user.photos.build(photo_params)
 
       if @photo.save
          redirect_to @photo, notice: 'Photo was successfully created.'
@@ -41,6 +42,11 @@ class PhotosController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
+    def owner
+      @photo = current_user.photos.find_by(id: params[:id])
+      redirect_to photos_path, notice: "У вас нет разрешений!" if @photo.nil?
+    end
+
     def set_photo
       @photo = Photo.find(params[:id])
     end
