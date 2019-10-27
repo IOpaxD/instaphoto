@@ -3,6 +3,7 @@ $display3-size: 2.5rem;
 $jumbotron-bg: rgba(255,255,255,0.2);
 $card-bg: rgba(255,255,255,0.3);
 $card-cap-bg:rgba(255,255,255,0.5);
+$body-bg: rgba(210,210,210,1);
 @import 'bootstrap';
 
 // .container{
@@ -11,6 +12,7 @@ $card-cap-bg:rgba(255,255,255,0.5);
 .container-login{
   padding-left: 0;
   padding-right: 0;
+  text-align: center;
 }
 .bg-transparent{
   background-color: rgba(255, 255, 255, 0.5);
@@ -22,7 +24,7 @@ $card-cap-bg:rgba(255,255,255,0.5);
   margin-right: auto;
 }
 .photo-form{
-  width:50%;
+  display: inline-block;
   margin-left: auto;
   margin-right: auto;
 }
@@ -34,12 +36,7 @@ $card-cap-bg:rgba(255,255,255,0.5);
   background-size: cover;
   background-image: url(image_path('hanging_on.jpg'));
 }
-.container-baground-2{
-  background-color: rgba(210,210,210,1);
-  width: 100%;
-  height: 100vh;
-  background-size: cover;
-}
+
 
 .jumbotron-landin{
 
