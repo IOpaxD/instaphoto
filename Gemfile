@@ -24,6 +24,8 @@ gem 'devise'
 
 gem "paperclip", "~> 6.0.0"
 
+gem 'aws-sdk', '~> 3.0', '>= 3.0.1'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
