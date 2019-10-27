@@ -5,7 +5,9 @@
   <div class="card-body">
 
 <p>
+  <%= image_tag @photo.image.url(:medium) %>
   <strong>Description:</strong>
+
   <%= @photo.description %>
 </p>
 <p><%= @photo.user.email if @photo.user %></p>
