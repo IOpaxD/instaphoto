@@ -1,5 +1,12 @@
-<h1>New Photo</h1>
 
-<%= render 'form', photo: @photo %>
+<div class="card text-center photo-form">
+  <div class="card-header">
+  <h4>Добавить фото</h4>
+  </div>
+  <div class="card-body">
 
-<%= link_to 'Back', photos_path %>
+<%= render 'form', photo: @photo  %>
+
+<%= link_to 'Back', photos_path%>
+</div>
+</div>
